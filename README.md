@@ -26,10 +26,10 @@ the code was forked from palaga. so the code is in vu/thesis directory. i change
 
 mainly, the title page needs to be amended. as requested by VU, the thesis needs to include course id, program name, number of credits, supervisors, etc. which has been defined. but the logic conditions haven't been added so that means all of these have to be defined in .tex file.
 
-in the vu-thesis.sty file, \\
+in the vu-thesis.sty file, \
 % ------
 
-% ------\\
+% ------\
 like this is the experience i learned.
 
 ### this is still a basic template, anyone who reads this or even thinks of using this. you are very welcomed to make any modifications to this. i noticed students in other universities all have their own decent template to use. 
