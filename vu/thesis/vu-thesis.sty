@@ -1,0 +1,78 @@
+\NeedsTeXFormat{LaTeX2e}
+% ----------
+% \providespackage{} defines the name of the package
+% forgot from where, but the name of the package defined need to be the same as the name of the file.
+% -------------
+\ProvidesPackage{vu-thesis}[2012/12/27 General configuration for a Vrije
+                          Universiteit thesis]
+
+% Import packages
+%\RequirePackage[dutch]{babel}
+\RequirePackage{amsmath}
+\RequirePackage{float}
+\RequirePackage{graphicx}
+\RequirePackage{etoolbox}
+\RequirePackage{enumitem}
+\RequirePackage{lipsum}
+\usepackage[utf8]{inputenc}
+
+% Settings:
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0mm}
+
+
+% Commands and Environments
+% title page settings
+% ------------------------------------------------------
+% tip: name of the definition after'\def' need to start with '@'. these definitions called in renewcommand '\maketitle' must also start with '@' to make them working when called in main.tex
+% ------------------------------------------------------
+% 30 April 2019. for now all the commands need to be called in main.tex as no logic conditions in the code.
+\newcommand{\studentid}[1]{\def\@studentid{student id: \textit{#1}}}
+\newcommand{\courseid}[1]{\def\@courseid{Course Code: \textit{#1}}}
+\newcommand{\supervisor}[1]{\def\@supervisor{Supervisor: \textit{#1}}}
+\newcommand{\credit}[1]{\def\@credit{Credits: \textit{#1}}}
+\newcommand{\program}[1]{\def\@program{Program: \textit{#1}}}
+
+% set layout of title page by setting \maketitle command
+% -----------
+% \renewcommand doesn't make the renewed command inherit. 
+% -----------
+\renewcommand{\maketitle}{
+    \begin{center}
+        \huge\textbf\@title
+        \par
+        \vskip 1.5em  %skip distances vertically
+        \small\@author
+        \par
+        \small\@studentid
+        \par
+        \small\@supervisor
+        \par
+        \small\@courseid
+        \par
+        \small\@credit
+        \par
+        \small\@program
+        \vskip 2em
+        \small\@date
+    \end{center}
+    \begin{figure}[b]
+        \centering
+        \includegraphics[width=\linewidth]{images/VUlogo_NL.png}
+    \end{figure}
+    
+\newpage
+}
+
+%general settings for diagrams
+\newcommand{\diagram}[3]{
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=#1]{#2}
+        \caption{#3}
+        %\label{fig:cstruct}
+    \end{figure}
+}
+
+% vim: ft=tex
+
