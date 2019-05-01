@@ -20,3 +20,18 @@ instead of .sty, you may also see .cls. the difference is that:
 .cls is a class file. it defines a new kind of document from scratch. .cls file should be called at the head of .tex file by '\documentclass{}' command. 
 .sty wraps a bunch of self-defined commands into a package. so in the .tex file, it is called by '\usepackage{}' command. 
 my experience is that unless we are writing a formal scientific papaer to publish, .sty should be enough for our thesis in school.
+
+## in the code
+the code was forked from palaga. so the code is in vu/thesis directory. i changed the format from .cls to .sty to make redefine commands more easily.
+
+mainly, the title page needs to be amended. as requested by VU, the thesis needs to include course id, program name, number of credits, supervisors, etc. which has been defined. but the logic conditions haven't been added so that means all of these have to be defined in .tex file.
+
+in the vu-thesis.sty file, 
+% ------
+
+% ------
+like this is the experience i learned.
+
+### this is still a basic template, anyone who reads this or even thinks of using this. you are very welcomed to make any modifications to this. i noticed students in other universities all have their own decent template to use. 
+
+### SO DOES VU STUDENTS
