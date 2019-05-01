@@ -34,4 +34,4 @@ like this is the experience i learned.
 
 ### this is still a basic template, anyone who reads this or even thinks of using this. you are very welcomed to make any modifications to this. i noticed students in other universities all have their own decent template to use. 
 
-### SO DOES VU STUDENTS
+### SO DOES VU MASTER STUDENTS
